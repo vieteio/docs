@@ -1,0 +1,14 @@
+{
+  "name": "viete-docs",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "viete.io",
+  "private": true,
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },  
+  "devDependencies": {
+    "vuepress": "^1.9.8"
+  }
+}
