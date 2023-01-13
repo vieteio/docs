@@ -2,6 +2,8 @@
 
 Import menu allows to add json with diagrams into any project.
 
+<img src="./import.png" alt="Import menu" width="400"/>
+
 ## JSON format
 
 Format desctiption is given as Type Script classes
