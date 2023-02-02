@@ -1,3 +1,8 @@
 node_modules/
 yarn.lock
 docs/.vuepress/dist
+
+.docusaurus
+build
+
+.DS_Store

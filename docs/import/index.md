@@ -1,3 +1,6 @@
+---
+sidebar_position: 2
+---
 # Import diagrams from json
 
 Import menu allows to add json with diagrams into any project.
