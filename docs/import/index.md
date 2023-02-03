@@ -5,7 +5,7 @@ sidebar_position: 3
 
 Import menu allows to add json with diagrams into any project.
 
-<img src="./import.png" alt="Import menu" width="400"/>
+<img srcset="./import.png 2x" alt="Import menu"/>
 
 ## JSON format
 
