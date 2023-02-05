@@ -28,7 +28,7 @@ To start draw a schema create a new project. Press button "Create project" a the
 <img srcset="./createProject.png 2x" alt="Create project"/>
 </div>
 
-<div style={{ width: '50%', clear: 'both' }}>
+<div style={{ width: '100%', clear: 'both' }}>
 You will get an empty project. To draw anything in it add a model.
 </div>
 
@@ -50,7 +50,7 @@ The new model will be created
 <img srcset="./newModel.png 2x" alt="New model"/>
 </div>
 
-<div style={{ width: '50%', clear: 'both' }}>
+<div style={{ width: '100%', clear: 'both' }}>
 Now you can create objects and edges to draw a scheme.
 </div>
 
@@ -96,7 +96,7 @@ To remove cursor click on any empty space of the editor or a model.
 <img srcset="./newObjectWithName.png 2x" alt="Object with a text inside"/>
 </div>
 
-<div style={{ width: '50%', clear: 'both' }}>
+<div style={{ width: '100%', clear: 'both' }}>
 </div>
 
 ### Create edge
@@ -128,24 +128,120 @@ You can enter a text on the new object.
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-Also you could add text to the edge. To do that hover mouse on the edge and text field for the edge will appear
+Also you could add text label to the edge. To do that hover mouse on the edge and text field for the edge will appear
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
 <img srcset="./hoveredEdgeWithVisibleTextField.png 2x" alt="Hovered edge with a visible text field"/>
 </div>
 
-
-<div style={{ width: '50%', clear: 'both' }}>
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+Just click on the text field in the same way as on the object and enter any text. Only a single line of text is allowed.
 </div>
 
-1. Первые вершины и ребра
-2. Tuple для описания состояний
-3. Choice для описания альтернатив в сценариях
-4. Атрибуты для описания параметров действий
-5. Mapping для декларации переходов от состояний к метрикам
-6. Decomposable
-7. Multi-edges
-8.  Ссылки на переиспользуемые элементы
-9.  Import моделей
-10. Вызов кодогенерации (скоро)
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./edgeWithText.png 2x" alt="Edge with text"/>
+</div>
+
+<div style={{ width: '100%', clear: 'both' }}>
+</div>
+
+### Create a scheme with several objects and edges
+
+<div style={{ width: '50%', float: 'left', clear: 'left' }}>
+You can continue add edges with object to build a chain. Just drag a new edge from the latest created object. The model size will be adjusted automaticaly.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./twoEdgesChain.png 2x" alt="Two edges chain"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+Let update texts for object and edges labels
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./twoEdgesWithTextChain.png 2x" alt="Two edges chain"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+Also you an drag an edge to an existing object. A new object will not be created in that case. Just hover edge on the existing object while dragging...
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./dragEdgeToExistingObject.png 2x" alt="Dragging edge to the existing object"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+... and release it. The edge end position will be adjusted automaticaly.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./draggedEdgeToExistingObject.png 2x" alt="Dragged edge to the existing object"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+Let name the new edge.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./operationScheme.png 2x" alt="Opertation scheme"/>
+</div>
+
+<div style={{ width: '100%', clear: 'both' }}>
+Well, we got a scheme of an operation, that consists of two transformation steps.
+</div>
+
+## Create a relation
+
+We create the chame of operation above and intend, that the "operation" edge is equal to chain "transformation 1" -> "transformation 2". To emphasize that we can use Viete editor element relation. Relation shows, how an edge and a chain or two chains are related to each other.
+
+<div style={{ width: '50%', float: 'left', clear: 'left' }}>
+To start creating relation click on the "operation" edge or its text field border with a left mouse button. The edge will be selected and become and marked with red color.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./edgeSelection.png 2x" alt="Edge selection"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+Select in the same way (with a left mouse button click) the first chain edge with label "transformation 1". The control to create relation will appear immidiately. Relation could be direction in on of two directions or bi-directional. So the control contains three buttons for that options.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./chainEdgeSelected.png 2x" alt="Chain edge selection"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+Select the second chain edge with label "transformation 2". The control position will be updated.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./chainSelected.png 2x" alt="Chain selection"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+Now let's create a bidirectional relation for a "operation" edge and the selected chain. Press the button with ⇔ sign. The relation will be created. There is a text field in relation, that allows to name it.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./newRelation.png 2x" alt="New relation"/>
+</div>
+
+<div style={{ width: '100%', clear: 'both' }}>
+Relations will not be used directly in that tutorial (but will do undirectly). Explanation for directional relations will be given in other chapters of the documentation.
+</div>
+
+## Navigation and elements moovement
+
+The relation element created above overlaps with "operation" edge label. Let's see, how we can move elements to make everything visible clear.
+
+<!-- 1. Tuple для описания состояний
+2. Choice для описания альтернатив в сценариях
+3. Атрибуты для описания параметров действий
+4. Mapping для декларации переходов от состояний к метрикам
+5. Decomposable
+6. Multi-edges
+7.  Ссылки на переиспользуемые элементы
+8.  Import моделей
+9.  Вызов кодогенерации (скоро) -->
