@@ -25,7 +25,8 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
 
   plugins: [
-    [require.resolve('docusaurus-lunr-search'), {}]
+    [require.resolve('docusaurus-lunr-search'), {}],
+    'plugin-image-zoom'
   ],
   
   // Even if you don't use internalization, you can use this field to set useful
@@ -81,6 +82,16 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+    // imageZoom: {
+    //   selector: '.markdown img',
+    //   options: {
+    //     margin: 24,
+    //     background: '#BADA55',
+    //     scrollOffset: 0,
+    //     container: '#zoom-container',
+    //     template: '#zoom-template'
+    //   }
+    // }
 };
 
 module.exports = config;
