@@ -194,10 +194,10 @@ Well, we got a scheme of an operation, that consists of two transformation steps
 
 ## Create a relation
 
-We create the chame of operation above and intend, that the "operation" edge is equal to chain "transformation 1" -> "transformation 2". To emphasize that we can use Viete editor element relation. Relation shows, how an edge and a chain or two chains are related to each other.
+We create the scheme of an operation above and intend, that the "operation" edge is equal to chain "transformation 1" -> "transformation 2". To emphasize that we can use Viete editor element relation. Relation shows, how an edge and a chain or two chains are related to each other.
 
 <div style={{ width: '50%', float: 'left', clear: 'left' }}>
-To start creating relation click on the "operation" edge or its text field border with a left mouse button. The edge will be selected and become and marked with red color.
+To start creating relation click on the "operation" edge or its text field border with a left mouse button. The edge will be selected and become marked with red color.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -205,7 +205,7 @@ To start creating relation click on the "operation" edge or its text field borde
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-Select in the same way (with a left mouse button click) the first chain edge with label "transformation 1". The control to create relation will appear immidiately. Relation could be direction in on of two directions or bi-directional. So the control contains three buttons for that options.
+Select in the same way (with a left mouse button click) the first chain edge with label "transformation 1". The control to create relation will appear immidiately. Relation could be directional in one of two directions or bi-directional. So the control contains three buttons for that options.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -229,19 +229,52 @@ Now let's create a bidirectional relation for a "operation" edge and the selecte
 </div>
 
 <div style={{ width: '100%', clear: 'both' }}>
-Relations will not be used directly in that tutorial (but will do undirectly). Explanation for directional relations will be given in other chapters of the documentation.
+Relations will not be used directly in that tutorial (but will do undirectly). The explanation for directional relations will be given in other pages of the documentation.
 </div>
 
-## Navigation and elements moovement
+## Elements movement and navigation
 
-The relation element created above overlaps with "operation" edge label. Let's see, how we can move elements to make everything visible clear.
+The relation element created above overlaps with "operation" edge label. Let's see, how we can move elements to make everything visible clearly.
+
+### Object movement
+
+To move object drag it with mouse with **left mouse button** and **Shift** key holded.
+
+### Edge label movement
+
+You can also change edge label position which is influence on whole edge geometry. To move label drag it in the same way as object with mouse with **left mouse button** and **Shift** key holded.
+
+### Move mode
+
+Viete editor allows to switch into Move mode, when elements movement is possible without holding **Shift** key. That simplify elements movement, but edge dragging will not be possible in that mode.
+
+Defualt mode for editor is Drag Edge mode. To switch into Move mode use Drag Edge button <img srcset="./dragEdgeModeButton.png 2x" alt="Drag Edge mode button"/> on the tool panel in the right. The editor mode will be switched into Move mode. And the button will be changed to Mode button <img srcset="./moveModeButton.png 2x" alt="Move mode button"/> to reflect that.
+
+### Relation position
+
+Relation position could not be changed directly. It is evaluated based on edges label position to be in the middle between edge chains.
+
+<div style={{ width: '50%', float: 'left', clear: 'left' }}>
+For our example relation we could move object and "operaton" edge lable to expand scheme a little so, that it will hold relation without significant overlapping.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./expandedSchemeToAvoidOverlapping.png 2x" alt="Expanded scheme without significant overlapping between relation and other elements"/>
+</div>
+
+<div style={{ width: '100%', clear: 'both' }}>
+</div>
+
+### Navigation
+
+To move whole editor plane drag it at any point with **right mouse button** holded.
 
 <!-- 1. Tuple для описания состояний
-2. Choice для описания альтернатив в сценариях
-3. Атрибуты для описания параметров действий
-4. Mapping для декларации переходов от состояний к метрикам
-5. Decomposable
-6. Multi-edges
-7.  Ссылки на переиспользуемые элементы
-8.  Import моделей
-9.  Вызов кодогенерации (скоро) -->
+1. Choice для описания альтернатив в сценариях
+2. Атрибуты для описания параметров действий
+3. Mapping для декларации переходов от состояний к метрикам
+4. Decomposable
+5. Multi-edges
+6.  Ссылки на переиспользуемые элементы
+7.  Import моделей
+8.  Вызов кодогенерации (скоро) -->
