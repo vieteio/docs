@@ -63,7 +63,9 @@ Vertices could be created only inside some model. Edges could be drawn between a
 ### Create object
 
 <div style={{ width: '50%', float: 'left', clear: 'left' }}>
+
 To create an object open a model context menu with a right mouse button click on any empty space *inside the model* and select menu item "Add object"
+
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -71,7 +73,7 @@ To create an object open a model context menu with a right mouse button click on
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-The new object will be created inside model.
+The new object will be created inside the model.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -269,12 +271,256 @@ For our example relation we could move object and "operaton" edge lable to expan
 
 To move whole editor plane drag it at any point with **right mouse button** holded.
 
-<!-- 1. Tuple для описания состояний
-1. Choice для описания альтернатив в сценариях
-2. Атрибуты для описания параметров действий
-3. Mapping для декларации переходов от состояний к метрикам
-4. Decomposable
-5. Multi-edges
-6.  Ссылки на переиспользуемые элементы
-7.  Import моделей
-8.  Вызов кодогенерации (скоро) -->
+## Create tuple
+
+Let's move on to creating the Freelance DAO schema. We already used edges to represent operation or transformation, while objects represented states. In real tasks state could be compound, i.e. consisting of several parameters. Tuple allows to represent such state.
+
+In out DAO a client with a task will be able to register the task in the DAO. Let's create a tuple to represent pair of a client and a task.
+
+<div style={{ width: '50%', float: 'left', clear: 'left' }}>
+
+To create a tuple open a model context menu with a right mouse button click on any empty space *inside the model* and select menu item "Add tuple"
+
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./addTuple.png 2x" alt="Add tuple"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+
+The new tuple with zero components will be created inside the model.
+
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./newTuple.png 2x" alt="New tuple"/>
+</div>
+
+<div style={{ width: '100%', clear: 'both' }}>
+</div>
+
+### Add a component to the tuple
+
+<div style={{ width: '50%', float: 'left', clear: 'left' }}>
+
+Plus sign **+** button allows to add components to the tuple. Press the button twice to add two components. Every component of a tuple is an independent object.
+
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./tupleWithTwoComponents.png 2x" alt="Tuple with two components"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+
+You can set text in component in the same way, as for object. Let's name the components as 'client' and 'task'.
+
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./tupleWithTwoNamedComponents.png 2x" alt="Tuple with two components"/>
+</div>
+
+<div style={{ clear: 'both' }}>
+</div>
+
+### Drag edge from tuple
+
+<div style={{ width: '50%', float: 'left', clear: 'left' }}>
+We need to describe an operation of publishing the task on a blockchain. To do that we should drag from a tuple an edge with a new object, that will respresent the state of a registered task.
+
+An edge can be dragged from a component or from the tuple itself. To drag an edge from the tuple hover a mouse on a tuple, but not on any of its components, and start dragging edge.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./dragEdgeFromTuple.png 2x" alt="Drag edge from tuple"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+The new edge and object will be created. We can name the edge with a label "publish on DAO".
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./edgeFromTuple.png 2x" alt="Edge dragged from tuple"/>
+</div>
+
+<div style={{ clear: 'both' }}>
+</div>
+
+### Convert to tuple
+
+<div style={{ width: '50%', float: 'left', clear: 'left' }}>
+Let's turn the new object into tuple to describe the state of a published task more precise. To do that open the object context menu with a right mouse button click and choose "Convert to tuple" option.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./convertToTuple.png 2x" alt="Convert to tuple"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+The object will be replaced with a tuple with one component. Note, that the edge will be targeted to the created tuple, not it's component.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./convertedToTuple.png 2x" alt="Tuple converted from object"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+Add the second component and name the components. In the DAO client is represented by it's accound, and task has status of published.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./publishedTask.png 2x" alt="Published task"/>
+</div>
+
+<div style={{ clear: 'both' }}>
+</div>
+
+### Describe an object properties with a tuple
+
+Notice, how we made a transition from some not formalized but quite clear entities "client" and "task" to formalized "client's account" and "published task". The last entities could be described precisely. We touch briefly how to do that in this tutorial and deeper in other pages of the documentation.
+
+<div style={{ width: '50%', float: 'left', clear: 'left' }}>
+
+Let's describe "published task". Published task in a Freelance DAO should have a description and a budget for execution. To describe that drag a tuple with two components from a "published task" component, i.e. drag and object, convert it into a tuple and add the second component.
+
+More advanced is to set a string type to "description" and number type to "budget". That details are out of scope of this tutorial.
+
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./componentProperties.png 2x" alt="Published task properties"/>
+</div>
+
+<div style={{ clear: 'both' }}>
+</div>
+
+## Create choice
+
+Let's describe another Freelance DAO usecase. A worker for the task is found and necessary price for the task execution is locked in the blockchain. Task execution could proceed in a two ways. First way is the task is executed well and accepted by the client. Another way is the task is not accepted by the client by some cause. To describe such alternative Viete editor offers choice element.
+
+<div style={{ width: '50%', float: 'left', clear: 'left' }}>
+You could create an empty choice element from model context menu with "Add choice" option.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./addChoice.png 2x" alt="Add a choice"/>
+</div>
+
+<div style={{ clear: 'both' }}>
+For our case it will be more convinient to create a choice in another way.
+</div>
+
+### Convert to choice
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+We have initially a tuple with worker's account, task and locked price. Edge with label "execution" should start from the tuple and end in choice element.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./initialTaskExecutionTuple.png 2x" alt="Tuple with task execution conditions"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'left' }}>
+To create the edge we firstly drag from the tuple an edge with a new object...
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./dragExecutionEdge.png 2x" alt="Drag execution edge with a new object"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+... and then open the object context menu and choose "Convert to choice" option.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./convertToChoice.png 2x" alt="Convert to choice option in menu"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+We will get a choice with the only one component.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./convertedToChoice.png 2x" alt="Object converted to choice"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+
+Let's add the second one with **+** button and name the components.
+
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./choiceWithAlternative.png 2x" alt="Choice with execution result alternative"/>
+</div>
+
+<div style={{ clear: 'both' }}>
+</div>
+
+### Use case with several choices
+
+Let's continue to describe use case with task execution.
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+If the work is accepted, the worker should get a reward.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./workerReward.png 2x" alt="Worker reward"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+Otherwise the client should get his payment back or the worker can disagree and open a dispute. The judge will solve the dispute and choose one of two possible alternatives.
+
+Scheme for that logic with several branching will have several choices.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./judgment.png 2x" alt="Judgment for work acception/rejection"/>
+</div>
+
+<div style={{ clear: 'both' }}>
+</div>
+
+## Edge attribute
+
+Usecase above has two actors: client and worker. Judgment process assumes, that there is one more actor - a judge (or may be several judges). To put judge into scheme without remakin schemen significantly we could add him/her as an attribute for edge "judment".
+
+Edge attribute is an object with an edge going from the object to attributed edge. It could be added manually by creating the object and the edge. But Viete editor offers automation for that.
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+
+To add an attribute to the edge open the edge context menu with a right mouse button click on the edge or it's label and select menu item "Add attribute".
+
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./addAttribute.png 2x" alt="Add attribute"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+An empty attribute will be created as an object linked (by an edge) to the edge label. Position for the attribute will be chppose automaticaly. You can move the attribute to any other position.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./newAttribute.png 2x" alt="New attribute"/>
+</div>
+
+<div style={{ width: '50%', float: 'left', clear: 'both' }}>
+Also you can enter a name for the attribute.
+</div>
+
+<div style={{ width: '50%', float: 'right', clear: 'right' }}>
+<img srcset="./namedAttribute.png 2x" alt="Named attribute"/>
+</div>
+
+<!--
+1. Атрибуты для описания параметров действий
+2. Mapping для декларации переходов от состояний к метрикам
+3. Decomposable
+4. Multi-edges
+5. Ссылки на переиспользуемые элементы
+6. Import моделей
+7. Вызов кодогенерации (скоро) -->
