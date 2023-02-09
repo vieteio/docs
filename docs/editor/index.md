@@ -3,25 +3,25 @@ sidebar_position: 2
 ---
 # Editor tutorial
 
-This tutorial shows how to use editor on example of DAO economic model modeling task.
+This tutorial demonstrates how to use an editor for a DAO economic model modeling task as an example.
 
-In context of DAO modeling task editor allows:
-1. to describe general schema of DAO mechanics in a free mode
+In the context of the DAO modeling task, the editor enables:
+1. To describe the general schema of DAO mechanics in a free form.
 
 <img src="./useCaseAndGovernance.png" alt="DAO general schema" width="400"/>
 
-2. to describe evaluation logic for metrics (for example token price) in a decomposable mode
+2. To describe the evaluation logic for metrics (for example, token price) in a decomposable manner.
 
 <img src="./metricEvaluation.png" alt="Metirc evaluation" width="400"/>
 
-3. to generate Python code for probabilistic modeling. The launched code will run modeling and display plots for selected metrics as the modeling result.
+3. To generate Python code for probabilistic modeling, which will run the modeling and display plots for selected metrics as the result of the modeling.
 
-Below we will walk through how to create schemas in the editor, and as a result, we will draw the schemas of the Freelance DAO project, fragments of which are in the screenshots above.
+ Consequently, we will depict the schemas of the Freelance DAO project, as illustrated by the fragments in the screenshots above.
 
 ## Create project
 
 <div style={{ width: '50%', float: 'left', clear: 'left' }}>
-To start draw a schema create a new project. Press button "Create project" a the top of the header.
+To commence the process of creating a schema, you will need to create a new project. To do so, simply press the "Create Project" button located at the top of the header.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -29,13 +29,13 @@ To start draw a schema create a new project. Press button "Create project" a the
 </div>
 
 <div style={{ width: '100%', clear: 'both' }}>
-You will get an empty project. To draw anything in it add a model.
+This will result in the creation of an empty project. To add content to the project, you will need to add a model.
 </div>
 
 ## Create model
 
 <div style={{ width: '50%', float: 'left', clear: 'left' }}>
-To create a model open a context menu with a right mouse button click on any empty space and select menu item "Add model"
+To create a model, open the context menu by right-clicking on an empty space, and select the "Add Model" option from the menu.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -43,7 +43,7 @@ To create a model open a context menu with a right mouse button click on any emp
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-The new model will be created
+Upon selecting the "Add Model" option, a new model will be created.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -51,20 +51,20 @@ The new model will be created
 </div>
 
 <div style={{ width: '100%', clear: 'both' }}>
-Now you can create objects and edges to draw a scheme.
+With the creation of the new model, you can now proceed to create objects and edges to draw your desired scheme.
 </div>
 
 ## Create objects and edges
 
-Vertices could be created only inside some model. Edges could be drawn between any objects (including objects from different models). 
+It is important to note that objects can only be created within a model, while edges can be drawn between any objects, regardless of whether they belong to the same model or different models. 
 
-> Also it is permitted to draw an edge from a object into an edge, but not reverse. More about this later.
+> Note: Additionally, it is allowed to draw an edge from an object into another edge, however, this cannot be done in reverse. We will discuss this in greater detail later on.
 
 ### Create object
 
 <div style={{ width: '50%', float: 'left', clear: 'left' }}>
 
-To create an object open a model context menu with a right mouse button click on any empty space *inside the model* and select menu item "Add object"
+To create an object, right-click on any empty space *within the model* to open the model context menu and select the "Add Object" option.
 
 </div>
 
@@ -73,7 +73,7 @@ To create an object open a model context menu with a right mouse button click on
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-The new object will be created inside the model.
+Upon selecting the "Add Object" option, a new object will be created within the model.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -81,7 +81,7 @@ The new object will be created inside the model.
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-You can put a text, for example an object's name, into the object. To do that click on the object with left mouse button. Cursor will appear.
+To label the object with text, such as the object's name, simply click on the object with the left mouse button. This will bring up the cursor, allowing you to enter text.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -89,9 +89,9 @@ You can put a text, for example an object's name, into the object. To do that cl
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-Enter any text. Only a single line of text is allowed.
+Enter the desired text. Please note that only a single line of text is permitted.
 
-To remove cursor click on any empty space of the editor or a model.
+To remove the cursor, simply click on any empty space within the editor or the model.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -103,10 +103,10 @@ To remove cursor click on any empty space of the editor or a model.
 
 ### Create edge
 
-Let's create a first edge. Viete is aimed to create fast chains of objects connected by edges. So creating and edge requires minimum actions.
+Viete is designed to facilitate the rapid creation of chains of objects connected by edges. As a result, the process of creating an edge has been optimized to require the minimum number of actions possible.
 
 <div style={{ width: '50%', float: 'left', clear: 'left' }}>
-To create an edge just drag it from an object. Click with left mouse button on an object and drag the mouse outside the object. Edge will appear with a start at the object and it's end will follow to the mouse.
+To create an edge, simply click on an object with the left mouse button and drag the mouse away from the object. This will cause an edge to appear, originating from the object and extending to the mouse pointer.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -114,7 +114,7 @@ To create an edge just drag it from an object. Click with left mouse button on a
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-Release the mouse button and the edge will be created tohether with a new object for the edge's end.
+Once the mouse button is released, the edge will be created along with a new object at the end of the edge.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -122,7 +122,7 @@ Release the mouse button and the edge will be created tohether with a new object
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-You can enter a text on the new object.
+You can label the new object with text as previously described.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -130,7 +130,7 @@ You can enter a text on the new object.
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-Also you could add text label to the edge. To do that hover mouse on the edge and text field for the edge will appear
+You may also add a text label to the edge by hovering your mouse over the edge, which will bring up the text field for the edge.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -138,7 +138,7 @@ Also you could add text label to the edge. To do that hover mouse on the edge an
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-Just click on the text field in the same way as on the object and enter any text. Only a single line of text is allowed.
+Simply click on the text field in the same manner as you would with an object, and enter the desired text. 
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -151,7 +151,7 @@ Just click on the text field in the same way as on the object and enter any text
 ### Create a scheme with several objects and edges
 
 <div style={{ width: '50%', float: 'left', clear: 'left' }}>
-You can continue add edges with object to build a chain. Just drag a new edge from the latest created object. The model size will be adjusted automaticaly.
+To build a chain, you may continue to add edges with objects by dragging a new edge from the previously created object. The size of the model will automatically adjust to accommodate the added elements.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -159,7 +159,7 @@ You can continue add edges with object to build a chain. Just drag a new edge fr
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-Let update texts for object and edges labels
+You can revise and update the texts for the object and edge labels.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -167,7 +167,7 @@ Let update texts for object and edges labels
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-Also you an drag an edge to an existing object. A new object will not be created in that case. Just hover edge on the existing object while dragging...
+Additionally, you can also drag an edge to an existing object. In that case, a new object will not be created. Simply hover the edge over the existing object while dragging …
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -175,7 +175,7 @@ Also you an drag an edge to an existing object. A new object will not be created
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-... and release it. The edge end position will be adjusted automaticaly.
+... and then release the mouse button. The endpoint of the edge will be automatically adjusted.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -191,15 +191,15 @@ Let name the new edge.
 </div>
 
 <div style={{ width: '100%', clear: 'both' }}>
-Well, we got a scheme of an operation, that consists of two transformation steps.
+We have now created a scheme of an operation that consists of two transformation steps.
 </div>
 
 ## Create a relation
 
-We create the scheme of an operation above and intend, that the "operation" edge is equal to chain "transformation 1" -> "transformation 2". To emphasize that we can use Viete editor element relation. Relation shows, how an edge and a chain or two chains are related to each other.
+We created the schema of the operation above, with the intention that the "operation" edge represents the chain "transformation 1" -> "transformation 2". To emphasize this, we can use the Viete editor element relation. The relation displays the relationship between an edge and a chain or two chains.
 
 <div style={{ width: '50%', float: 'left', clear: 'left' }}>
-To start creating relation click on the "operation" edge or its text field border with a left mouse button. The edge will be selected and become marked with red color.
+To create the relation, click on the "operation" edge or its label border with the left mouse button. The edge will be selected and highlighted in red to indicate it is selected.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -207,7 +207,7 @@ To start creating relation click on the "operation" edge or its text field borde
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-Select in the same way (with a left mouse button click) the first chain edge with label "transformation 1". The control to create relation will appear immidiately. Relation could be directional in one of two directions or bi-directional. So the control contains three buttons for that options.
+Then select the first chain edge labeled "transformation 1" in the same manner. The control to create the relation will become available. The relation can be unidirectional or bidirectional, and the control provides three buttons to choose from.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -215,7 +215,7 @@ Select in the same way (with a left mouse button click) the first chain edge wit
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-Select the second chain edge with label "transformation 2". The control position will be updated.
+Then, select the "transformation 2" edge in the same manner and the control will be updated.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -223,7 +223,7 @@ Select the second chain edge with label "transformation 2". The control position
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-Now let's create a bidirectional relation for a "operation" edge and the selected chain. Press the button with ⇔ sign. The relation will be created. There is a text field in relation, that allows to name it.
+To create a bidirectional relation between the "operation" edge and the selected chain, click on the button with the ⇔ symbol in the control. The relation will be established, and a text field will become available for naming the relation.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -231,7 +231,7 @@ Now let's create a bidirectional relation for a "operation" edge and the selecte
 </div>
 
 <div style={{ width: '100%', clear: 'both' }}>
-Relations will not be used directly in that tutorial (but will do undirectly). The explanation for directional relations will be given in other pages of the documentation.
+Further explanations regarding directional relations will be provided in other sections of the documentation.
 </div>
 
 ## Elements movement and navigation
