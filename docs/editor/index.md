@@ -183,7 +183,7 @@ Additionally, you can also drag an edge to an existing object. In that case, a n
 </div>
 
 <div style={{ width: '50%', float: 'left', clear: 'both' }}>
-Let name the new edge.
+Assign a name to the newly created edge.
 </div>
 
 <div style={{ width: '50%', float: 'right', clear: 'right' }}>
@@ -517,10 +517,9 @@ Also you can enter a name for the attribute.
 </div>
 
 <!--
-1. Атрибуты для описания параметров действий
-2. Mapping для декларации переходов от состояний к метрикам
-3. Decomposable
-4. Multi-edges
-5. Ссылки на переиспользуемые элементы
-6. Import моделей
-7. Вызов кодогенерации (скоро) -->
+1. Mapping для декларации переходов от состояний к метрикам
+2. Decomposable
+3. Multi-edges
+4. Ссылки на переиспользуемые элементы
+5. Import моделей
+6. Вызов кодогенерации (скоро) -->
